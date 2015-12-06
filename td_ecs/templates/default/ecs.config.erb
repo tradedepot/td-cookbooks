@@ -1,7 +1,9 @@
 ECS_LOGFILE=/log/ecs-agent.log
 ECS_LOGLEVEL=<%= node["opsworks_ecs"]["ecs-agent"]["loglevel"] %>
 ECS_DATADIR=/data
-ECS_CLUSTER=<%= node["opsworks"]["ecs_clusters"][0]["ecs_cluster_name"] %>
 ECS_DISABLE_METRICS=true
 ECS_ENGINE_AUTH_TYPE=dockercfg
 ECS_ENGINE_AUTH_DATA={"https://index.docker.io/v1/":{"auth":"<%= node[:docker][:auth] %>","email":"<%= node[:docker][:email] %>"}}
+TMP_1=<%= node["aws_opsworks_agent"] %>
+TMP_2=<%= node["opsworks"] %>
+TMP_3=<%= node["opsworks_ecs"] %>
